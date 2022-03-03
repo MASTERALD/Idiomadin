@@ -11,6 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
 
     <style>
+
+  
 		#main-container{
 			padding-top: 200px;
 			text-align: center;
@@ -23,6 +25,7 @@
 			text-decoration: none;
 			text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 			box-shadow: 0 1px 1px rgba(0,0,0,0.3); 
+			font-family: 'Fredoka', sans-serif;
 		}
 
 		.btn-green{
@@ -59,12 +62,86 @@
  }
 
 
+ .lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 250px;
+}
+
+.loader.hidden {
+    animation: fadeOut 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
 
 
 	</style>
 </head>
     <body>
-        <div >   
+		<div class="loader">
+			<img style="height: 300px;" width="600px" src="descargar_preview_rev_1.png" alt="Loading..." />
+		</div>
+	
 
 
     <header>
@@ -99,8 +176,13 @@
 
 </div>
     <div id="main-container">
-		<a href="IDEOMas.html" class="btn btn-green">Que Idioma Quieres Aprender?</a>
-	</div>
+		<a href="IDEOMas.html" class="btn btn-green"><h1>Que Idioma Quieres Aprender?</h1></a>
+	</div><br><br>
+
+
+
+
+
 
 
     <script src="main.js"></script>
@@ -112,12 +194,15 @@
 
 
 
-    
+        
    
 
 
+<img style="" src="descargar_preview_rev_1.png">
 
-    
+<h1 style="
+font-family: 'Fredoka', sans-serif;">Meraz Apps Copyright 2022@ </h1>
+  
  
    </body>
 </html>
