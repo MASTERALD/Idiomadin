@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Idiomadin</title>
+	<link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="logo_200x200_preview_rev_1.png" type="image/x-icon">
+    <style>
+  
+body{
+
+
+background-color:  #3e94ec;
+font-family: "Roboto", sans-serif;
+font-size: 16px;
+font-weight: 400;
+text-rendering: optimizeLegibility;
+}
+
+div.table-title{
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    padding: 5px;
+    width: 100%;
+}
+
+.table-title h3{
+    color: #fafafa;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Roboto",sans-serif;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+.table-fill{
+    background: white;
+    border-radius: 3px;
+    border-collapse: collapse;
+    height: 320px;
+    margin: auto;
+    max-width: 600px;
+    padding: 5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+
+}
+
+th{
+
+    color: #d5d5d5;
+    background-color: #1b1e24;
+    border-bottom: 4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font-size: 23px;
+    font-weight: 100;
+    padding: 24px;
+    text-align: left;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+}
+
+th:first-child{
+    border-top-left-radius: 3px;
+
+}
+
+th:last-child{
+    border-top-right-radius: 3px;
+    border-right: none;
+}
+
+tr{
+    border-top: 1px solid #C1c3d1;
+    border-bottom: 1px solid #C1c3d1;
+    color: #666b85;
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td{
+    background-color: #4e5066;
+    color: #fff;
+    border-top: 1px solid #22262e;
+}
+
+tr:firrst-child{
+    border-top: none;
+}
+
+tr:last-child{
+    border-bottom: none;
+}
+
+tr: nth-child(odd) td{
+    background: #ebebeb;
+}
+
+tr:nth-child(odd):hover td{
+    background: #4e5066;
+}
+
+tr:last-child td:first-child{
+    border-bottom-left-radius: 3px ;
+}
+
+tr:last-child td:last-child{
+    border-bottom-right-radius: 3px;
+
+}
+
+td{
+    background: #fff;
+    padding: 20px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 18px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px;
+
+}
+
+
+#main-container{
+			padding-top: 200px;
+			text-align: center;
+		}
+
+		.btn{
+			border-radius: 3px;
+			display: inline-block;
+			padding: 30px 30px;
+			text-decoration: none;
+			text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+			box-shadow: 0 1px 1px rgba(0,0,0,0.3); 
+		}
+
+		.btn-green{
+			color: white;
+			background-color: #00c3ff;
+		}
+		.btn-green:hover{
+			background-color: #00c3ff;	
+		}
+		.btn-green:active{
+			background-color: #00c3ff;
+		}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <table  style="text-align:center;" clas="table-fill">   
+        
+        <thead>
+            <tr>
+                <th class="table-left">El Alfabeto</th>
+                <th class="table-left">Pronunciacion</th>
+            </tr>
+            <tr>
+                <th class="table-left">O alfabeto</th>
+                <th class="table-left">Pronúncia</th>
+                <th class="table-left">Reproducir Pronunciacion
+                    <script >
+                        var sonidouno = new Audio();
+                        sonidouno.src="alfabeto.mp3";
+                        
+                        </script>
+                        
+                            <button class="contact100-form-btn" id="enviar" onmousedown="sonidouno.play()">
+                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+                                            </button>
+                </th>
+
+            </tr>
+
+            
+            
+            <tbody class="table-hover">
+                <tr>
+                    <td class=" text-left">A</td>
+                   <td class=" text-left">á</td>
+                   <td class=" text-left">
+                    <script >
+                        var sonidodos = new Audio();
+                        sonidodos.src="A.mp3";
+                        
+                        </script>
+                        
+                            <button class="contact100-form-btn" id="enviar" onmousedown="sonidodos.play()">
+                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+                                            </button>
+                   </td>
+                  
+                   
+                </tr>
+
+                <tr>
+                    <td class=" text-left">B</td>
+                    <td class=" text-left">bê</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidotres = new Audio();
+                            sonidotres.src="B.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidotres.play()">
+                                    <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+                                                </button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">C</td>
+                    <td class=" text-left">cê</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidocuatro = new Audio();
+                            sonidocuatro.src="C.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidocuatro.play()">
+                                    <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">D</td>
+                    <td class=" text-left">dê</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidocinco = new Audio();
+                            sonidocinco.src="D.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidocinco.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">E</td>
+                    <td class=" text-left">ê / é</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoseis = new Audio();
+                            sonidoseis.src="E.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoseis.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">F</td>
+                    <td class=" text-left">éfe / fê</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidociete = new Audio();
+                            sonidociete.src="F.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidociete.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">G</td>
+                    <td class=" text-left">gê / guê</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoocho = new Audio();
+                            sonidoocho.src="G.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoocho.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">H</td>
+                    <td class=" text-left">agá</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidonueve = new Audio();
+                            sonidonueve.src="H.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidonueve.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">I</td>
+                    <td class=" text-left">i</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidodies = new Audio();
+                            sonidodies.src="I.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidodies.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">J</td>
+                    <td class=" text-left">jóta / ji</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoonce = new Audio();
+                            sonidoonce.src="J.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoonce.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">K</td>
+                    <td class=" text-left">cá / cápa</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidodoce = new Audio();
+                            sonidodoce.src="K.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidodoce.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">L</td>
+                    <td class=" text-left">éle / lê</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidotrece = new Audio();
+                            sonidotrece.src="L.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidotrece.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">M</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidocatorse= new Audio();
+                            sonidocatorse.src="M.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidocatorse.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">N</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoquince= new Audio();
+                            sonidoquince.src="N.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoquince.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class=" text-left">O</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidodiesiseis= new Audio();
+                            sonidodiesiseis.src="O.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidodiesiseis.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">P</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidodiesiocho= new Audio();
+                            sonidodiesiocho.src="P.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidodiesiocho.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">Q</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidodiesinueve= new Audio();
+                            sonidodiesinueve.src="Q.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidodiesinueve.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">R</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoviente= new Audio();
+                            sonidoviente.src="R.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoviente.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">S</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoventiuno= new Audio();
+                            sonidoventiuno.src="S.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoventiuno.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">T</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoventidos= new Audio();
+                            sonidoventidos.src="T.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoventidos.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">U</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoventitres= new Audio();
+                            sonidoventitres.src="U.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoventitres.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">V</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoventicuatro= new Audio();
+                            sonidoventicuatro.src="V.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoventicuatro.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">W</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoventicinco= new Audio();
+                            sonidoventicinco.src="W.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoventicinco.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">X</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoventiseis= new Audio();
+                            sonidoventiseis.src="X.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoventiseis.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">Y</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoventisiete= new Audio();
+                            sonidoventisiete.src="Y.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoventisiete.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=" text-left">Z</td>
+                    <td class=" text-left">á</td>
+                    <td class=" text-left">
+                        <script >
+                            var sonidoventiocho= new Audio();
+                            sonidoventiocho.src="Z.mp3";
+                            
+                            </script>
+                            
+                                <button class="contact100-form-btn" id="enviar" onmousedown="sonidoventiocho.play()">
+                                                <img style="width: 60px; height: 60px;" src="Button-Play-icon.png" alt="">
+
+                                                </button>
+                    </td>
+                </tr>
+                   
+
+            
+                
+                
+                
+            </tbody>
+
+
+           
+
+            
+            
+            
+            
+            
+        </thead>
+       
+ 
+        
+    <br>
+   
+    <h2 style="   width: 1330px; height: 65px; color: #fff; background-color: #1b1e24; text-align: center;" > El Abecedario En Portugues</h2>
+    <br>
+    <p>Escritura Mayuscula: A | B | C | D | E | F |  G  H    I J K L M N Ñ O P Q R S T U V W X Y Z</p>
+    <br>
+    <p>Escritura Minuscula: a | b | c | d | e | f | g h i j k l m n ñ o p q r s t u v w x y z</p>
+    <br>
+
+    
+  
+    <br>
+
+        <h2 style=" color: #fff; text-align: center;"> Portugues: O Alfabeto</h2>
+		
+        <div id="main-container">
+            <a href="" class="btn btn-green">Siguiente Leccion</a>
+        </div>
+
+	</div>
+</div>
+</div>
+<!--Fin   Tarjetas-->
+</body>
+</html>
