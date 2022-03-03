@@ -1,13 +1,5 @@
-
-const ham = document.querySelector('.ham');
-const enlaces = document.querySelector('.enlaces-menu');
-const barras = document.querySelectorAll('.ham span');
-
-
-
-ham.addEventListener('click', () => {
-    enlaces.classList.toggle('activado');
-    barras.forEach(child => {child.classList.toggle('animado')});
-    ham.classList.toggle('girar');
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden"; // class "loader hidden"
 });
 
